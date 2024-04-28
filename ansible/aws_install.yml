@@ -1,0 +1,14 @@
+---
+
+- hosts: aws_demo
+  become: true
+  tasks:
+  
+  - name: install apache package
+    dnf:
+      name: httpd
+      state: latest
+
+  - name: install nginx package
+    dnf:
+      name: nginx
